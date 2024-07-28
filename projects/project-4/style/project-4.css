@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Satisfy&display=swap');
+
+.navbar {
+    background-color: #FFFFFF;
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #000;
+
+}
+
+
+.navbar-nav {
+    margin-right: 200px;
+}
+
+#nav-left {
+    padding-left: 200px;
+}
+
+#main{
+    color: #1AE0EC;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 481px) {
+    .name {
+        display: none;
+    }
+
+    #nav-left {
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 991px) {
+    .name {
+        display: none;
+    }
+    .links-- {
+        text-align: right;
+        margin: 0px;
+        padding: 0px;
+        flex-direction: column-reverse;
+    }
+
+    #nav-left {
+        padding-left: 0px;
+    }
+}
+
+.name {
+    font-family: "Satisfy", cursive;
+    font-weight: 700;
+    font-size: 25px;
+    font-style:normal;
+  }
+
+body {
+    margin: 0;
+    font-family: "Heebo", sans-serif;
+
+}
+
+nav{
+    position: sticky;
+    top: 0;
+}
+
+.header{
+    background-color: white;
+}
+
+
+.navbar {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: flex-end;
+    
+}
+
+#logoname{
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-size: 25px;
+    width: 79px;
+    height: 35px;
+}
+
+#logoname:hover{
+    text-shadow:0px 0px 30px #1238e1;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.header_container {
+    display: flex;
+    background-color: white;
+    margin-top: -31px;
+    justify-content: right;
+    align-items: center;
+    font-family: "Heebo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:500;
+    font-style: normal;
+
+}
+
+
+.img {
+    position: fixed;
+    top: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
+
+.name {
+    margin-left: 10px;
+    transition: transform .2s;
+}
+
+.contact {
+    margin: 0px 10px;
+    transition: transform .2s;
+    text-decoration: none;
+    color: black;
+
+}
+
+.service {
+    margin: 0px 10px;
+    transition: transform .2s;
+    text-decoration: none;
+    color: black;
+}
+
+.about {
+    margin: 0px 10px;
+    transition: transform .2s;
+    text-decoration: none;
+    color: black;
+}
+
+.main{
+    margin: 0px 10px;
+    color: #1AE0EC;
+    transition: transform .2s;
+     text-decoration: none;
+    
+    
+}
+
+main{
+    direction: rtl;
+}
+
+.main:hover{
+    transform: scale(1.5);
+}
+
+.about:hover{
+    transform: scale(1.5);
+}
+
+.service:hover{
+    transform: scale(1.5);
+}
+
+.contact:hover{
+    transform: scale(1.5);
+}
+
+.hero-section {
+    text-align: center;
+    font-family: "Heebo", sans-serif;
+    background-image: url(../images/header-background.png);
+    background-position: center center;
+    background-size: cover;
+    padding: 70px 0;
+    position: relative;
+    top: 20px;
+    
+
+}
+
+.hero-section>h1 {
+    font-weight: 900;
+    font-size: 80px;
+    margin: 0;
+    position: relative;
+
+}
+
+.hero-section>p {
+    font-size: 18px;
+    position: relative;
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #13E8F163;
+    border: 1px solid black;
+    
+    
+}
+
+
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top:11px;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+#navbar-brand{
+    background-color: white;
+    text-decoration: none;
+    color: black;
+ }
+
+ #profilePic{
+    height: 137px;
+    width: 128px;
+    border-radius: 100%;
+
+ }
+
+ #about{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin-top: 10px;
+
+ }
+
+ .btn{
+    background-color: #1AE0EC;
+    color: black;
+    font-weight: bold;
+    height: 29px;
+    width: 170px;
+    border-radius: 25px;
+ }
+
+ h2{
+    color:#3A3A3A;
+    font-size: 35px;
+ }
+
+ .secBG{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 ;
+    margin-top: 3px;
+    width: 100%;
+    background-color: #EBFEFF;
+    padding: 0px 20px;
+ }
+
+ .secBG > img{
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    margin: 50px 50px;
+    box-shadow: 5px 5px 55px 5px gray;
+    
+
+ }
+
+
+ footer{
+    background-color: black;
+    width: 100%;
+    border-bottom: 2px solid #1AE0EC;
+    height: 51px;
+
+
+ }
+ .down{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 5px 40px;
+    color: #1AE0EC;
+    padding-top: 13px;
+ }
+
+
+ #btntop{
+    
+    position: relative;
+    z-index: 10000;
+ }
+
+ #main{
+    color: #1AE0EC;
+    font-weight: bold;
+}

@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.container {
+    width: 100%;
+}
+
+.form-container h1 {
+    color: #fdbd03;
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.form-container p {
+    color: #020253;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.btn-custom {
+    background-color: #fdbd03;
+    color: #050303;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form-control {
+    background: #e5eeff;
+    border-bottom: #fdbd03 2px solid;
+}
+
+label {
+    display: flex;
+    text-align: right;
+    font-size: 16px;
+}
+
+.head-img {
+    display: inline-flex;
+    flex-direction: row;
+    background: #fdbd03;
+    border-radius: 50px;
+    margin-top: 50px;
+    height: 50px;
+    width: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-image: url(../images/Icon\ simple-whatsapp.svg);
+}
+
+.icon-i>img {
+    display: inline-flex;
+    flex-direction: row;
+    background: #fdbd03;
+    border-radius: 50px;
+    margin-top: 50px;
+    height: 50px;
+    width: 50px;
+    background-position: center center;
+    margin-bottom: 10px;
+}
+
+.icon-i :nth-child(4) {
+    background-image: url(../images/Icon\ awesome-linkedin-in.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+}
+
+.icon-i :nth-child(3) {
+    background-image: url(../images/Icon\ awesome-facebook-f.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 8px;
+}
+
+.icon-i :nth-child(2) {
+    background-image: url(../images/instagram.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+}
+
+.icon-i :nth-child(1) {
+    background-image: url(../images/Icon\ simple-whatsapp\ \(1\).svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+}
+
+.right-btn {
+    display: flex;
+    align-items: end;
+}
+
+.border-b {
+    border-bottom: 5px solid #fdbd03;
+    
+}
+
+.border-1 {
+    border-top: 5px solid #fdbd03;
+}
+
