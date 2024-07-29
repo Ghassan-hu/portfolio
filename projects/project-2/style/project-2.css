@@ -65,7 +65,7 @@ a {
 }
 
 .main-pg {
-  background-image: url(/projects/project-1/images/bg-header.png);
+  background-image: url(../../../images/bg-header.png);
   text-align: center;
   background-position: center center;
   background-size: cover;

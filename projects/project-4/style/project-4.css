@@ -187,7 +187,7 @@ main{
 .hero-section {
     text-align: center;
     font-family: "Heebo", sans-serif;
-    background-image: url(../images/header-background.png);
+    background-image: url(../../../images/bg-header.png);
     background-position: center center;
     background-size: cover;
     padding: 70px 0;

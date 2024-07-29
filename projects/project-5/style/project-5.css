@@ -46,10 +46,26 @@
     font-size: 15px;
     font-weight: bold;
   }
-
+  
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    font-size: 20px;
+    direction: rtl;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .menu>a:hover {
+    color: var(--bluex-color);
+    transition: 1s;
+  }
   
   .main-pg {
-    background-image: url(/projects/project-1/images/bg-header.png);
+    background-image: url(../../../images/bg-header.png);
     text-align: center;
     background-position: center center;
     background-size: cover;
