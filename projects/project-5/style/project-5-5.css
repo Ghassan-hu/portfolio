@@ -101,7 +101,7 @@ body {
 
   @media (max-width: 768px) {
     .container {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr ;
       grid-template-rows: repeat(12, auto);
     }
     .text-content, .form-container {
