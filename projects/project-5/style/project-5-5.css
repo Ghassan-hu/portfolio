@@ -37,6 +37,25 @@ p{
 
 .item {
   position: relative;
+  animation-name: shutter-in-top;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+@keyframes shutter-in-top {
+  0% {
+    transform:rotateX(-100deg);
+    transform-origin:top;
+    opacity:0;
+  }
+  100% {
+    transform:rotateX(0deg);
+    transform-origin:top;
+    opacity:1;
+  }
 }
 
 .item img {
@@ -251,3 +270,6 @@ form > label {
     grid-area: 13 / 2 / 14 / 3;
   }
 }
+
+
+
