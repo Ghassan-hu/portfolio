@@ -9,7 +9,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  background-color: #f0f0f0;
+  background-color: #E5EEFF;
 }
 
 h1 {
@@ -32,7 +32,7 @@ p{
   max-width: 1200px;
   width: 100%;
   padding: 10px;
-  background-color: white;
+  background-color: #E5EEFF;
 }
 
 .item {
@@ -61,7 +61,7 @@ p{
 .form-container {
   direction: rtl;
   grid-area: 4 / 1 / 7/ 3;
-  background-color: #52057b;
+  background-color: #8E097C;
   color: white;
   display: flex;
   flex-direction: column;
