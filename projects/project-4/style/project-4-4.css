@@ -114,3 +114,9 @@ label {
 .border-1 {
     border-top: 5px solid #fdbd03;
 }
+@media screen and (max-width: 768px) {
+    .row{
+        height: 810px;
+    }
+    
+}
