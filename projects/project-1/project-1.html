@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project-1</title>
+    <link rel="stylesheet" href="style/project-1.css" />
+    <script  src="../../js/project-1.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project-1</title>
-  <link rel="stylesheet" href="style/project-1.css" />
-  <script src="../../js/project-1.js"></script>
-</head>
-
-<body>
-  <nav class="navbar" id="main-pg-pg">
-    <div class="logo">
-      <a href="../../index.html" target="_parent">
-        <img src="../../images/Screenshot 2024-06-30 184704.png" alt="profile--img" />
-      </a>
-      <span class="my-header-name">Ghassan Hussen</span>
+  <body>
+    <nav class="navbar" id="main-pg-pg">
+      <div class="logo">
+        <a
+          href="../../index.html"
+          target="_parent"
+        >
+          <img
+            src="../../images/Screenshot 2024-06-30 184704.png"
+            alt="profile--img"
+          />
+        </a>
+        <span class="my-header-name">Ghassan Hussen</span>
+      </div>
+      <div class="icon" onclick="phonenav()">
+        <div class="icon-nav">☰</div>
+      </div>
+      <div class="menu" id="navbar-links">
+        <a
+          href="../../index.html"
+          >ראשי</a
+        >
+        <a href="#about">אודות</a>
+        <a href="#img">שירותים</a>
+        <a href="#main">צור קשר</a>
+      </div>
+    </nav>
+    <section class="main-pg">
+      <div class="bg-color-blend" id="about"></div>
+      <h1 class="name-of-project">Here & now</h1>
+      <p class="name-of-paragraf1">
+        לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש
+        <br />“ממלא מקום” בעת עריכה, בתחום הדפוס, ההדפסה והפרסום.
+      </p>
+      <br /><br />
+      <div class="anchors">
+        <a class="anchor-sec" href="./project-1-1.html"> לצפייה בפרויקט </a>
+        &nbsp;&nbsp;&nbsp;
+        <a
+          class="anchor-sec"
+          download="project-1.zip"
+          href="../../zip-files/project-1.zip"
+        >
+          להורדת הפרויקט
+        </a>
+      </div>
+    </section>
+    <main class="icon-s" id="img">
+      <div class="img-icone">
+        <img src="images/img-SASS.png" alt="sass-icon" />
+        <img src="images/img-Bootstrap.png" alt="bootstrap-icon" />
+        <img src="images/img-HTML.png" alt="html-icon" />
+        <img src="images/img-CSS.png" alt="css-icon" />
+      </div>
+    </main>
+    <div class="main-pic" id="main">
+      <img src="images/pg-1.png" alt="" />
     </div>
-    <div class="icon" onclick="phonenav()">
-      <div class="icon-nav">☰</div>
-    </div>
-    <div class="menu" id="navbar-links">
-      <a href="../../index.html#home">ראשי</a>
-      <a href="../../index.html#about">אודות</a>
-      <a href="../../index.html#services">שירותים</a>
-      <a href="../../index.html#contact">צור קשר</a>
-    </div>
-  </nav>
-  <section class="main-pg">
-    <div class="bg-color-blend" id="about"></div>
-    <h1 class="name-of-project">Here & now</h1>
-    <p class="name-of-paragraf1">
-      לורם איפסום או בקיצור ליפסום, הוא מלל מקובל וחסר משמעות המשמש
-      <br />“ממלא מקום” בעת עריכה, בתחום הדפוס, ההדפסה והפרסום.
-    </p>
-    <br /><br />
-    <div class="anchors">
-      <a class="anchor-sec" href="./project-1-1.html"> לצפייה בפרויקט </a>
-      &nbsp;&nbsp;&nbsp;
-      <a class="anchor-sec" download="project-1.zip" href="../../zip-files/project-1.zip">
-        להורדת הפרויקט
-      </a>
-    </div>
-  </section>
-  <main class="icon-s" id="img">
-    <div class="img-icone">
-      <img src="images/img-SASS.png" alt="sass-icon" />
-      <img src="images/img-Bootstrap.png" alt="bootstrap-icon" />
-      <img src="images/img-HTML.png" alt="html-icon" />
-      <img src="images/img-CSS.png" alt="css-icon" />
-    </div>
-  </main>
-  <div class="main-pic" id="main">
-    <img src="images/pg-1.png" alt="" />
-  </div>
-</body>
-
+  </body>
 </html>

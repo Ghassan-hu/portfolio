@@ -318,18 +318,3 @@ main{
     color: #1AE0EC;
     font-weight: bold;
 }
-
-/* Define the keyframes for the fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Apply the fade-in animation to the body or specific elements */
-body, .navbar, .hero-section, .header_container, .secBG {
-    animation: fadeIn 1s ease-in-out;
-}

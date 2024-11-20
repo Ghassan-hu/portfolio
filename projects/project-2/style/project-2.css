@@ -7,8 +7,7 @@
 body {
   margin: 0;
   font-family: "Heebo", sans-serif;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
+
 }
 
 .navbar {
@@ -345,13 +344,4 @@ padding: 0px 20px;
    
   }
 
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }

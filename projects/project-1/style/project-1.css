@@ -74,8 +74,7 @@ a {
   background-size: cover;
   padding: 70px 0;
   position: relative;
-  opacity: 0;
-  animation: fadeIn 2s forwards;
+
 }
 
 .name-of-project {
@@ -346,10 +345,4 @@ a {
 
   }
 
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
 }
