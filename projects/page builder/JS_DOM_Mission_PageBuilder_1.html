@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div id="container" class="container">
+        <!-- This is where the user-created elements will be added -->
+    </div>
+
+    <!-- Side menu for controls -->
+    <div id="side-menu">
+        <h1>בונה מסך</h1>
+        <p>לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. פליסק אמפרידיאט.</p>
+        <!-- Form for element creation -->
+        <form id="elementForm">
+            <!-- Element ID input -->
+            <div class="form-group">
+                <label for="elementId">מזהה אלמנט (ID)</label>
+                <input type="text" class="form-control" id="elementId" placeholder="הכנס מזהה ייחודי">
+            </div>
+
+            <!-- Element type -->
+            <div class="form-group">
+                <label for="elementType">סוג אלמנט</label>
+                <select class="form-control" id="elementType">
+                    <option value="h1">כותרת 1</option>
+                    <option value="h2">כותרת 2</option>
+                    <option value="h3">כותרת 3</option>
+                    <option value="p">פסקה</option>
+                    <option value="div">DIV</option>
+                </select>
+            </div>
+
+            <!-- Width input -->
+            <div class="form-group">
+                <label for="elementWidth">רוחב (פיקסלים)</label>
+                <input type="number" class="form-control" id="elementWidth" placeholder="לדוגמה, 200">
+            </div>
+
+            <!-- Height input -->
+            <div class="form-group">
+                <label for="elementHeight">גובה (פיקסלים)</label>
+                <input type="number" class="form-control" id="elementHeight" placeholder="לדוגמה, 100">
+            </div>
+
+            <!-- Content input -->
+            <div class="form-group">
+                <label for="elementContent">תוכן</label>
+                <input type="text" class="form-control" id="elementContent" placeholder="הכנס תוכן">
+            </div>
+
+            <!-- Font color input -->
+            <div class="form-group">
+                <label for="fontColor">צבע גופן</label>
+                <input type="color" class="form-control" id="fontColor" value="#000000">
+            </div>
+
+            <!-- Background color input -->
+            <div class="form-group">
+                <label for="bgColor">צבע רקע</label>
+                <input type="color" class="form-control" id="bgColor" value="#ffffff">
+            </div>
+
+            <!-- Font size input -->
+            <div class="form-group">
+                <label for="fontSize">גודל גופן (פיקסלים)</label>
+                <input type="number" class="form-control" id="fontSize" placeholder="לדוגמה, 16">
+            </div>
+
+            <!-- Font type input -->
+            <div class="form-group">
+                <label for="fontType">סוג גופן</label>
+                <select class="form-control" id="fontType">
+                    <option value="Arial">Arial</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Verdana">Verdana</option>
+                </select>
+            </div>
+
+            <!-- Border color input -->
+            <div class="form-group">
+                <label for="borderColor">צבע גבול</label>
+                <input type="color" class="form-control" id="borderColor" value="#000000">
+            </div>
+
+            <!-- Border style input -->
+            <div class="form-group">
+                <label for="borderStyle">סוג גבול</label>
+                <select class="form-control" id="borderStyle">
+                    <option value="solid">Solid</option>
+                    <option value="dashed">Dashed</option>
+                    <option value="dotted">Dotted</option>
+                    <option value="double">Double</option>
+                </select>
+            </div>
+
+            <!-- Border thickness input -->
+            <div class="form-group">
+                <label for="borderThickness">עובי גבול (פיקסלים)</label>
+                <input type="number" class="form-control" id="borderThickness" placeholder="לדוגמה, 2">
+            </div>
+
+            <!-- Padding input -->
+            <div class="form-group">
+                <label for="padding">ריפוד פנימי (פיקסלים)</label>
+                <input type="number" class="form-control" id="padding" placeholder="לדוגמה, 10">
+            </div>
+
+            <!-- Margin input -->
+            <div class="form-group">
+                <label for="margin">רווח חיצוני (פיקסלים)</label>
+                <input type="number" class="form-control" id="margin" placeholder="לדוגמה, 10">
+            </div>
+
+            <!-- Shadow X-axis input -->
+            <div class="form-group">
+                <label for="shadowX">צל על ציר X (פיקסלים)</label>
+                <input type="number" class="form-control" id="shadowX" placeholder="לדוגמה, 5">
+            </div>
+
+            <!-- Shadow Y-axis input -->
+            <div class="form-group">
+                <label for="shadowY">צל על ציר Y (פיקסלים)</label>
+                <input type="number" class="form-control" id="shadowY" placeholder="לדוגמה, 5">
+            </div>
+
+            <!-- Border radius input -->
+            <div class="form-group">
+                <label for="borderRadius">רדיוס פינה (פיקסלים)</label>
+                <input type="number" class="form-control" id="borderRadius" placeholder="לדוגמה, 10">
+            </div>
+
+            <!-- Buttons -->
+            <button type="button" class="btn btn-purple btn-block mb-3" onclick="addElement()">הוסף אלמנט</button>
+            <button type="button" class="btn btn-purple btn-block mb-3" onclick="saveElements()">שמור אלמנטים</button>
+            <button type="button" class="btn btn-purple btn-block mb-3" onclick="clearScreen()">נקה מסך</button>
+            <button type="button" class="btn btn-purple btn-block mb-3" onclick="loadSavedElements()">טען אלמנטים</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+   <script src="./js.file/js.mission.js"></script>
+
+    <div id="popupMessage" class="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-button" onclick="closePopup()">&times;</span>
+            <p id="popupText"></p>
+        </div>
+    </div>
+
+</body>
+</html>

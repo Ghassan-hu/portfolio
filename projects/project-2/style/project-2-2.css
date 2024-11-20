@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+
+body {
+    margin: 0;
+    direction: rtl;
+
+}
+
+.pg-1 {
+    width: 100%;
+    background-image: url(../images/Path\ 15@2x.png);
+    height: 590px;
+    position: relative;
+
+}
+
+.content {
+ 
+    width: fit-content;
+    height: 643px;
+    background: #1A1A1AD4;
+    position: absolute;
+    top: 160px;
+    left: 60%;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 50px;
+    justify-content: center;
+    color: white;
+    padding: 0px 30px;
+}
+
+form h1,
+p,
+label {
+    font-family: "Heebo", sans-serif;
+}
+
+form label {
+
+    font-weight: bold;
+}
+
+form input {
+    height: 50px;
+    background-color: #FFFFFF;
+    border: #D31C75 solid 2px;
+}
+
+.form-btn {
+    background-color: #D31C75;
+    width: max-content;
+    padding: 10px 32px;
+    color: #FFFFFF;
+    font-family: "Heebo", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+
+div > a {
+    display: block;
+    position: fixed;
+    text-align: center;
+    background: #8b8686;
+    color: whitesmoke;
+    height: 50px;
+    min-width: 100%;
+    align-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: x-large;
+    bottom: 0px;
+   
+  }
+@media  screen and (max-width: 1281px) {
+    .content{
+        right: 50%;
+        transform: translateX(50%);
+        font-size: 15px;
+    }
+    
+}
+@media  screen and (max-width:430px) {
+   form{
+     font-size: 10px;
+  
+    }
+    
+}

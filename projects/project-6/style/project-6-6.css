@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Assistant:wght@100..900&display=swap");
+body {
+  margin: 0;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 800px;
+}
+
+.main-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.card-info {
+  position: absolute;
+  display: block;
+}
+
+h1 {
+  color: #d3e10e;
+  font-family: "Assistant, sans-serif";
+  font-size: 86px;
+}
+
+p {
+  color: #f9f9f9;
+  font-family: "Assistant, sans-serif";
+  font-size: 20px;
+}
+
+form {
+  margin-top: 30px;
+  text-align: right;
+  direction: rtl;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 16px;
+}
+
+.input-field {
+  padding: 0.5em;
+  border: none;
+  border-bottom: 2px solid #d3e10e;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  background: #f6f6f6;
+}
+
+.submit-button {
+  border: none;
+  font-size: 16px;
+  font-family: "Assistant, sans-serif";
+  background-color: #d3e10e;
+  display: inline-block;
+  height: 30px;
+  padding: 10px 50px;
+  margin: 25px 15px 0 0;
+  text-align: center;
+}
+
+.form-group {
+  margin: 20px;
+}
+
+div > a {
+  display: block;
+  position: fixed;
+  text-align: center;
+  background: #8b8686;
+  color: whitesmoke;
+  height: 50px;
+  min-width: 100%;
+  align-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: x-large;
+  bottom: 0px;
+}
+
+@media (max-width: 768px) {
+  .main-project {
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    font-size: 48px;
+  }
+  p {
+    font-size: 16px;
+    padding-bottom: 100px;
+  }
+  form {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0 50px;
+  }
+  .form-group {
+    margin: 10px 0;
+  }
+  label {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  .input-field {
+    font-size: 14px;
+  }
+  .submit-button {
+    padding: 10px 20px;
+    margin: 20px 0 0 0;
+    height: auto;
+    font-size: 14px;
+  }
+  div > a {
+    font-size: large;
+    height: 40px;
+  }
+}
+@media (max-width: 480px) {
+  img {
+    height: 400px;
+    margin: 0;
+    padding: auto;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .input-field {
+    font-size: 12px;
+  }
+  .submit-button {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+  div > a {
+    font-size: medium;
+    height: 35px;
+  }
+} /*# sourceMappingURL=project-6-6.css.map */

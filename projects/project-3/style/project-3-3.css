@@ -1,0 +1,153 @@
+ 
+ @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+
+ 
+ body {
+    margin: 0;
+    background: #FFFFFF;
+}
+
+.cofee {
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+h1 {
+    font-family: "Heebo", sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: "Heebo", sans-serif;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    color: #020253;
+    direction: rtl;
+    padding: 200px;
+}
+
+label {
+    color: #2C2C2C;
+    font-family: "Heebo", sans-serif;
+    font-weight: bold;
+}
+
+input {
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-bottom: 4px solid #020253;
+    background: #E5EEFF;
+}
+
+.form-btn1 {
+    background: #020253;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "Heebo", sans-serif;
+    font-weight: bold;
+    padding: 5px 32px;
+}
+
+
+div > a {
+    display: block;
+    position: fixed;
+    text-align: center;
+    background: #8b8686;
+    color: whitesmoke;
+    height: 50px;
+    min-width: 100%;
+    align-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: x-large;
+    bottom: 0px;
+   
+  }
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    form {
+        padding: 150px;
+    }
+
+    input {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .cofee {
+        flex-direction: column;
+    }
+
+    form {
+        padding: 100px;
+    }
+
+    input {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    form {
+        padding: 50px;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    .form-btn1 {
+        padding: 5px 20px;
+    }
+
+    div > a {
+        font-size: large;
+    }
+}
+
+@media (max-width: 576px) {
+    form {
+        padding: 20px;
+    }
+
+    input {
+        width: 75%;
+    }
+
+    .form-btn1 {
+        padding: 5px 15px;
+    }
+
+    div > a {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 400px) {
+    form {
+        padding: 10px;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    .form-btn1 {
+        padding: 5px 10px;
+    }
+
+    div > a {
+        font-size: small;
+    }
+}

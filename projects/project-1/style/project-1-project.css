@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
+
+
+
+.bg-color-project {
+  background-image: linear-gradient(to top, #2DFF8C, #281EFF);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5em auto;
+  min-height: 100%;
+  height: 100vh;
+}
+
+.head-line {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3.75rem;
+  margin: 0;
+  padding-bottom: 0.3125rem;
+  font-family: "Playfair Display", serif;
+
+}
+
+h5 {
+  font-size: 2rem;
+  margin: 0;
+  padding-top: 0.3125rem;
+
+}
+
+p {
+  font-size: 1rem;
+  margin: 0;
+  padding-top: 0.625rem;
+}
+
+form {
+  margin-top: 1.875rem;
+  text-align: right;
+  direction: rtl;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 16px;
+}
+
+.input-field {
+  padding: 0.5em;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  background: transparent;
+}
+
+.submit-button {
+  border: none;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: rgb(5, 4, 4);
+  display: inline-block;
+  height: 1.875rem;
+  padding: 0 4.375rem;
+  margin: 1.5625rem 0.9375rem 0 0;
+  text-align: center;
+}
+
+.form-group {
+  margin: 20px;
+}
+
+.footer-1 {
+  background: #000;
+  height: 50px;
+  width: 100%;
+  border-bottom: 2px solid var(--bluex-color);
+}
+
+.my-name {
+  color: var(--bluex-color);
+  margin: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+div > a {
+  display: block;
+  position: fixed;
+  text-align: center;
+  background: #8b8686;
+  color: whitesmoke;
+  height: 50px;
+  min-width: 100%;
+  align-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: x-large;
+  bottom: 0px;
+}
+
+@media (max-width: 768px) {
+
+  .bg-color-project {
+    height: auto;
+    padding: 3.125rem 1.25rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+
+  form {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .form-group {
+    margin: 0.625rem;
+    width: 100%;
+  }
+
+  .submit-button {
+    width: 100%;
+    margin: 1.25rem 0 0;
+    height: fit-content;
+  }
+}

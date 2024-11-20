@@ -1,0 +1,178 @@
+.font {
+    font-family: "Raleway", sans-serif;
+}
+
+.card-header {
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    animation: gradient 3s infinite alternate;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.list-group-item {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    transform: scale(1.05);
+    background-color: #f8f9fa;
+}
+
+.btn-success,
+.btn-warning,
+.btn-danger {
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #28a745;
+}
+
+.btn-warning:hover {
+    background-color: #ffc107;
+}
+
+.btn-danger:hover {
+    background-color: #dc3545;
+}
+
+.btn-clicked {
+    animation: magic-click 0.5s ease-out;
+}
+
+@keyframes magic-click {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    50% {
+        transform: scale(1.2);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+.btn-working {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-working::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    animation: loading 1s infinite;
+}
+
+@keyframes loading {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.btn-moving {
+    position: relative;
+    animation: move-to-target 1s ease-in-out forwards, return-to-origin 1s ease-in-out 1s forwards;
+}
+
+@keyframes move-to-target {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(200px, -50px);
+        /* Adjust these values to match your layout */
+    }
+}
+
+@keyframes return-to-origin {
+    0% {
+        transform: translate(200px, -50px);
+        /* Match the end of move-to-target */
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.btn-crazy {
+    animation: crazy-animation 1s infinite;
+}
+
+@keyframes crazy-animation {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        background-color: #28a745;
+    }
+
+    25% {
+        transform: translate(-10px, 10px) rotate(15deg);
+        background-color: #ffc107;
+    }
+
+    50% {
+        transform: translate(10px, -10px) rotate(-15deg);
+        background-color: #dc3545;
+    }
+
+    75% {
+        transform: translate(-10px, -10px) rotate(15deg);
+        background-color: #17a2b8;
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+        background-color: #28a745;
+    }
+}
+
+.emoji {
+    position: absolute;
+    top: 0;
+    font-size: 24px;
+    animation: fall 3s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.completed-task {
+    text-decoration: line-through;
+}

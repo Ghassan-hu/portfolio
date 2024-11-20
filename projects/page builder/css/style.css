@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #e0f7fa;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  min-height: 100vh;
+}
+
+#container {
+  flex-grow: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  min-height: 80vh;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  border-radius: 8px;
+}
+
+#side-menu {
+  width: 100%;
+  background: linear-gradient(135deg, #ff4081, #f50057);
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.form-group label {
+  color: #555;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.btn-purple {
+  background-color: #6200ea;
+  color: white;
+  width: 100%;
+  max-width: 200px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-purple:hover {
+  background-color: #3700b3;
+  transform: scale(1.05);
+}
+
+/* Media Queries for responsiveness */
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  #side-menu {
+    width: 300px;
+    margin-right: 20px;
+  }
+  #container {
+    margin: 0;
+    flex-grow: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  #side-menu {
+    width: 350px;
+  }
+  .btn-purple {
+    width: 180px;
+  }
+}
+
+/* Add this CSS to your stylesheet */
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.popup-content {
+    background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    margin: auto;
+    animation: slideUp 0.5s ease-out;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.close-button:hover {
+    transform: scale(1.1);
+    color: #ff4081;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

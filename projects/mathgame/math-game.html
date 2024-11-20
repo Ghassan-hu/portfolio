@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>משחק ללמידת חשבון</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="mathcss/math-game.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Game Title -->
+        <h1 class="mb-5 animate__animated animate__fadeInDown">משחק ללמידת חשבון</h1>
+
+        <!-- Game Options Section -->
+        <div class="wrapper animate__animated animate__fadeInUp">
+            <h3>אפשרויות משחק</h3>
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <label for="rangeSelect" class="form-label label-animated">בחר טווח מספרים</label>
+                    <select id="rangeSelect" class="form-select">
+                        <option value="1-10">1-10</option>
+                        <option value="1-100">1-100</option>
+                        <option value="1-1000">1-1000</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="operatorSelect" class="form-label label-animated">בחר פעולה מתמטית</label>
+                    <select id="operatorSelect" class="form-select">
+                        <option value="+">חיבור</option>
+                        <option value="-">חיסור</option>
+                        <option value="*">כפל</option>
+                        <option value="/">חילוק</option>
+                        <option value="sqrt">שורש</option>
+                        <option value="%">מודולו</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- New Exercise Button -->
+            <div class="d-flex justify-content-center mb-4">
+                <button id="newExerciseBtn" class="btn btn-primary btn-lg pulse">צור תרגיל חדש</button>
+            </div>
+
+            <!-- Exercise and Input Section -->
+            <div class="text-center">
+                <div id="exerciseResult" class="exercise-display mb-3 animate__animated animate__bounceIn">= תרגיל</div>
+                <div class="input-group">
+                    <input type="number" id="userAnswer" class="form-control" placeholder="תשובתך">
+                    <button id="checkAnswerBtn" class="btn btn-check">
+                        <span class="btn-text">בדוק</span>
+                        <span class="btn-icon"><i class="fas fa-check"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exercise History Table -->
+        <div class="table-section wrapper animate__animated animate__fadeInUp">
+            <h3>היסטוריית תרגילים</h3>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>נקודות</th>
+                            <th>תשובה נכונה</th>
+                            <th>תשובה שגויה</th>
+                            <th>תרגיל</th>
+                        </tr>
+                    </thead>
+                    <tbody id="exerciseTable">
+                        <!-- Exercises will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="js/math.js"></script>
+</body>
+</html>
