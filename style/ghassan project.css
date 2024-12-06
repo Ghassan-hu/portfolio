@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap");
 
 :root {
-  --bluex-color: #1ae0ec;
+  --bluex-color: #00b4d8;
+  --text-primary: #2b2d42;
+  --text-secondary: #4a4e69;
+  --bg-light: #f8f9fa;
+  --transition: all 0.3s ease-in-out;
 }
 
 html {
@@ -11,26 +15,28 @@ html {
 body {
   margin: 0;
   font-family: "Heebo", sans-serif;
-  scroll-behavior: smooth;
+  color: var(--text-primary);
+  line-height: 1.6;
   animation: fadeInPage 1s ease-out;
 }
 
 .navbar {
   display: flex;
   justify-content: space-around;
-  align-items: flex-end;
-  padding: 10px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background: white;
+  align-items: center;
+  padding: 15px 0;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
   flex-wrap: wrap;
   border-top: 3px solid var(--bluex-color);
+  transition: var(--transition);
 }
 
-.icon-nav {
-  display: none;
+.navbar:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
 .logo {
@@ -43,23 +49,53 @@ body {
   width: 40px;
   height: 40px;
   margin-right: 10px;
+  transition: var(--transition);
+}
+
+.logo img:hover {
+  transform: scale(1.1);
 }
 
 .menu {
   display: flex;
   justify-content: space-between;
   gap: 35px;
-  font-size: 20px;
+  font-size: 18px;
   direction: rtl;
+}
+
+.menu > a {
+  color: var(--text-primary);
+  position: relative;
+  padding: 5px 0;
+  transition: var(--transition);
+}
+
+.menu > a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--bluex-color);
+  transition: var(--transition);
+}
+
+.menu > a:hover {
+  color: var(--bluex-color);
+}
+
+.menu > a:hover::after {
+  width: 100%;
+}
+
+.icon-nav {
+  display: none;
 }
 
 a {
   text-decoration: none;
-}
-
-.menu>a:hover {
-  color: var(--bluex-color);
-  transition: 1s;
 }
 
 article {
@@ -116,13 +152,21 @@ article>p {
 .about-me {
   text-align: center;
   padding-top: 100px;
-  animation: slideIn 1s ease-out;
+  opacity: 0;
+  animation: slideInFromBottom 1s ease-out forwards;
+  animation-delay: 0.3s;
 }
 
 .about-me-img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.about-me-img:hover {
+  transform: scale(1.05);
 }
 
 .para {
@@ -133,8 +177,19 @@ article>p {
   background: var(--bluex-color);
   border-radius: 50px;
   width: 167px;
-  height: 29px;
+  height: 40px;
   margin: 50px;
+  border: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.2);
+}
+
+.btn-blue:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 180, 216, 0.3);
 }
 
 .main-pg-pic {
@@ -161,11 +216,20 @@ article>p {
 
 .card {
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   text-align: center;
   overflow: hidden;
-  margin: 30px auto 30px auto;
+  margin: 30px auto;
+  transition: var(--transition);
+  opacity: 0;
+  animation: scaleIn 0.6s ease-out forwards;
+  animation-delay: calc(var(--card-index, 0) * 0.1s);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .inside-pic-1 {
@@ -309,8 +373,6 @@ article>p {
 .h1-p-form {
   padding: 100px 50px 30px 0;
 }
-
-
 
 .final-form-1 {
   direction: rtl;
@@ -677,11 +739,64 @@ article>p {
 }
 
 @keyframes fadeInPage {
-  from {
+  0% {
     opacity: 0;
+    transform: translateY(-20px);
   }
-
-  to {
+  100% {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: var(--transition);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  
+  .menu {
+    gap: 20px;
+    font-size: 16px;
+  }
+  
+  article > h1 {
+    font-size: 48px;
+  }
+  
+  .card {
+    margin: 20px 10px;
   }
 }

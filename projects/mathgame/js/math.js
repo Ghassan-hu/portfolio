@@ -85,16 +85,24 @@ function initGame() {
     });
 
     checkAnswerBtn.addEventListener('click', function() {
+        checkUserAnswer();
+    });
+
+    // Add event listener for Enter key on input
+    answerInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            checkUserAnswer();
+        }
+    });
+
+    function checkUserAnswer() {
         const userAnswer = parseFloat(answerInput.value);
         if (!isNaN(userAnswer)) {
             const isCorrect = checkAnswer(currentExercise.correctAnswer, userAnswer);
             const points = isCorrect ? 1 : 0;
-            
             addExerciseToTable(currentExercise.exercise, currentExercise.correctAnswer, userAnswer, points);
-            
             // Add animation class based on correct/incorrect answer
             checkAnswerBtn.classList.add(isCorrect ? 'correct-answer' : 'incorrect-answer');
-            
             // Remove animation class after animation completes
             setTimeout(() => {
                 checkAnswerBtn.classList.remove('correct-answer', 'incorrect-answer');
@@ -105,14 +113,8 @@ function initGame() {
         } else {
             alert('אנא הכנס מספר תקין.');
         }
-    });
-
-    // Add event listener for Enter key on input
-    answerInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            checkAnswerBtn.click();
-        }
-    });
+    }
+    
 }
 
 // Run initGame when the DOM is fully loaded
