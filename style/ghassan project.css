@@ -800,3 +800,19 @@ article>p {
     margin: 20px 10px;
   }
 }
+
+.section-2 {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .section-2 {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center; /* Center items */
+  }
+  .project-div {
+      width: 100%; /* Make project divs full width */
+      margin-bottom: 20px; /* Add space between items */
+  }}
