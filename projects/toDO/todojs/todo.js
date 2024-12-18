@@ -1,15 +1,32 @@
 class TodoManager {
     constructor(initialTodos = []) {
         this.todos = initialTodos;
+        this.loadTodos(); // Load todos from local storage
     }
+
+    loadTodos() {
+        const storedTodos = JSON.parse(localStorage.getItem('todos'));
+        if (storedTodos) {
+            this.todos = storedTodos;
+        }
+    }
+
+    saveTodos() {
+        localStorage.setItem('todos', JSON.stringify(this.todos));
+    }
+
     addTodo(title) {
         this.todos.push({ title: title, completed: false });
+        this.saveTodos(); // Save todos to local storage
     }
 }
 
-let todomanage = new TodoManager([
+// Initialize TodoManager and load todos
+let todomanage = new TodoManager();
+todomanage.loadTodos(); // Ensure todos are loaded from local storage
 
-]);
+// Call showlists to display todos on page load
+showlists();
 
 function showlists() {
     document.getElementById("active").innerHTML = "";
@@ -39,6 +56,7 @@ function completeTodo(title) {
             todo.completed = true;
         }
     }
+    todomanage.saveTodos(); // Save todos to local storage
     showlists();
 }
 
@@ -68,6 +86,7 @@ function updateTask() {
                 todo.title = newTitle;
             }
         }
+        todomanage.saveTodos(); // Save todos to local storage
         showlists();
         inputElement.value = "";
         currentEditingTitle = null;
@@ -86,6 +105,7 @@ function deleteTodo(title) {
             todomanage.todos.splice(todomanage.todos.indexOf(todo), 1);
         }
     }
+    todomanage.saveTodos(); // Save todos to local storage
     showlists();
 }
 
